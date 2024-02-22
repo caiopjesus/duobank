@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".InicialActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="230dp"
+        android:layout_height="30dp"
+        android:text="DUOBANK"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <TextView
+        android:id="@+id/lblSaldo"
+        android:layout_width="74dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
+        android:text="Saldo:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <TextView
+        android:id="@+id/txtSaldo"
+        android:layout_width="209dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="24dp"
+        android:text="50000"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/lblSaldo"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <Button
+        android:id="@+id/btnPix"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="btnPix"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:icon="@drawable/pix"
+        app:iconGravity="start|textStart"
+        app:layout_constraintEnd_toStartOf="@+id/btnPagar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaldo" />
+
+    <Button
+        android:id="@+id/btnPagar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="btnPagar"
+        app:icon="@drawable/barcode"
+        app:iconGravity="end"
+        app:layout_constraintEnd_toStartOf="@+id/btnTransferir"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaldo" />
+
+    <Button
+        android:id="@+id/btnTransferir"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="btnTransferir"
+        android:textAlignment="center"
+        app:icon="@drawable/transaction"
+        app:iconGravity="end"
+        app:layout_constraintEnd_toStartOf="@+id/btnDepositar"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaldo" />
+
+    <Button
+        android:id="@+id/btnDepositar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="56dp"
+        android:onClick="btnDepositar"
+        app:icon="@drawable/deposit"
+        app:iconGravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaldo" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="168dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:text="Olá, Caio"
+        android:textAlignment="textStart"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="21dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
